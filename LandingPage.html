@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovateX | Next-Gen Web Solutions</title>
+  <link rel="stylesheet" href="Style2.css">
+  <!-- Google Fonts for typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Innovate<span>X</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('login')">Login</a></li>
+          <li><a href="javascript:void(0)" class="btn-nav" onclick="openModal('signup')">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <span class="badge">Welcome to the Future</span>
+        <h1>Build Modern Websites Faster & Better</h1>
+        <p>We provide cutting-edge solutions to help you design, deploy, and scale your digital ideas effortlessly.</p>
+        <div class="hero-buttons">
+          <a href="#features" class="btn-primary">Explore Features</a>
+          <button class="btn-secondary" onclick="openModal('signup')">Sign Up Now</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://via.placeholder.com/500x380/10b981/ffffff?text=Landing+Page+Illustration" alt="Digital Illustration">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Core Features</h2>
+        <p>Designed with precision, padding, and alignment to offer an exceptional user experience.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon-box">⚡</div>
+          <h3>Fast Performance</h3>
+          <p>Optimized structure ensuring fast load times and clean responsiveness across all screens.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon-box">🎨</div>
+          <h3>Creative Design</h3>
+          <p>Carefully selected color palettes and typography that bring your vision to life.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon-box">🛡️</div>
+          <h3>Secure & Reliable</h3>
+          <p>Built with reliable standard HTML5 and CSS3 practices to prevent layout overlapping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="about" class="cta-section">
+    <div class="container cta-container">
+      <h2>Ready to Elevate Your Digital Presence?</h2>
+      <p>Join thousands of creators who build stunning web projects with clean code structure.</p>
+      <button class="btn-primary btn-cta" onclick="openModal('signup')">Create Free Account</button>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="contact">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <a href="#" class="logo footer-logo">Innovate<span>X</span></a>
+        <p>Creating seamless, beautiful, and user-friendly digital landing pages.</p>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>Email: contact@innovatex.com</p>
+        <p>Phone: +1 (800) 123-4567</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 InnovateX. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+     LOGIN & SIGNUP MODAL POPUP
+     ========================================================================== -->
+  <div id="authModal" class="modal-overlay">
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      
+      <!-- Login Form -->
+      <div id="loginForm" class="auth-form active">
+        <h2>Welcome Back</h2>
+        <p class="auth-sub">Log in to manage your landing page projects.</p>
+        <form onsubmit="event.preventDefault(); alert('Logged in successfully!'); closeModal();">
+          <div class="input-group">
+            <label for="login-email">Email Address</label>
+            <input type="email" id="login-email" placeholder="name@example.com" required>
+          </div>
+          <div class="input-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="btn-auth">Log In</button>
+        </form>
+        <p class="switch-text">Don't have an account? <a href="javascript:void(0)" onclick="switchTab('signup')">Sign Up</a></p>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div id="signupForm" class="auth-form">
+        <h2>Create Account</h2>
+        <p class="auth-sub">Get started with your free developer account today.</p>
+        <form onsubmit="event.preventDefault(); alert('Account created successfully!'); closeModal();">
+          <div class="input-group">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" placeholder="John Doe" required>
+          </div>
+          <div class="input-group">
+            <label for="signup-email">Email Address</label>
+            <input type="email" id="signup-email" placeholder="name@example.com" required>
+          </div>
+          <div class="input-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" placeholder="Create a password" required>
+          </div>
+          <button type="submit" class="btn-auth">Create Account</button>
+        </form>
+        <p class="switch-text">Already have an account? <a href="javascript:void(0)" onclick="switchTab('login')">Log In</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript for Modal Popup Logic -->
+  <script>
+    function openModal(tab) {
+      document.getElementById('authModal').classList.add('show');
+      switchTab(tab);
+    }
+
+    function closeModal() {
+      document.getElementById('authModal').classList.remove('show');
+    }
+
+    function switchTab(tab) {
+      const loginForm = document.getElementById('loginForm');
+      const signupForm = document.getElementById('signupForm');
+
+      if (tab === 'login') {
+        loginForm.classList.add('active');
+        signupForm.classList.remove('active');
+      } else {
+        signupForm.classList.add('active');
+        loginForm.classList.remove('active');
+      }
+    }
+
+    // Close modal when clicking outside the box
+    window.onclick = function(event) {
+      const modal = document.getElementById('authModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+
+</body>
+</html>
