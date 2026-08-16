@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Global Reset & Background Accent
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 20px;
+}
+
+/* ==========================================================================
+   Calculator Box (Glassmorphism Effect)
+   ========================================================================== */
+.calculator {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 24px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   Display Screen
+   ========================================================================== */
+.display {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: right;
+  margin-bottom: 20px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-break: break-all;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.previous-operand {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  min-height: 24px;
+}
+
+.current-operand {
+  color: #f8fafc;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+/* ==========================================================================
+   CSS Grid Alignment for Buttons
+   ========================================================================== */
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  color: #f8fafc;
+  font-size: 1.25rem;
+  font-weight: 500;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Button Variants */
+.function {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.function:hover {
+  background: rgba(56, 189, 248, 0.2);
+}
+
+.operator {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  font-weight: 600;
+}
+
+.operator:hover {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.equals {
+  background: #10b981;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.equals:hover {
+  background: #059669;
+}
+
+.zero {
+  grid-column: span 1;
+}
